@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link href="invoice.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <hr class="bar">
+
+        <h1>{{ NAME }}</h1>
+
+        <div class="left-col">
+
+            <h2>INVOICE</h2>
+
+            <p>&nbsp;</p>
+
+            <h3>Tel: {{ TEL }}</h3>
+
+            <p>&nbsp;</p>
+
+            <h3>Payment by Check:</h3>
+            <p>{{ NAME }}</p>
+            <p>{{ ADD1 }}</p>
+            <p>{{ ADD2 }}</p>
+            <p>{{ ADD3 }}</p>
+
+            <p>&nbsp;</p>
+
+            <h3>US Electronic Payments</h3>
+            <p>{{ BANK }}</p>
+            <p>Account #: {{ ACCOUNT }}</p>
+            <p>Routing #: {{ ROUTING }}</p>
+        </div>
+
+        <div class="right-col">
+            <p>Attention: {{ ATTENTION }}</p>
+            <p>{{ POSITION }}</p>
+            <p>{{ COMPANY }}</p>
+            <p>{{ CADD1 }}</p>
+            <p>{{ CADD2 }}</p>
+
+            <p>&nbsp;</p>
+
+            <p>Date: {{ DATE }}</p>
+
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>{{ TASK }}</th>
+                    <th>Hours</th>
+                    <th>Pay</th>
+                </tr>
+            </table>
+        </div>
+
+        <hr class="bar">
+    </body>
+</html>
