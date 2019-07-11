@@ -15,7 +15,7 @@ company = input("Company: ")
 cadd1 = input("Company address line 1: ")
 cadd2 = input("Company address line 2: ")
 task = input("Task: ")
-
+date = input("Date: ")
 
 filled_form = (s.replace("{{ NAME }}", name)
                .replace("{{ TEL }}", tel)
@@ -31,4 +31,8 @@ filled_form = (s.replace("{{ NAME }}", name)
                .replace("{{ CADD1 }}", cadd1)
                .replace("{{ CADD2 }}", cadd2)
                .replace("{{ TASK }}", task)
+               .replace("{{ DATE }}", date)
               )
+
+f = open('final.html', 'w')
+f.write(filled_form)
