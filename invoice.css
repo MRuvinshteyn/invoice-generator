@@ -25,4 +25,5 @@ table, th, td {
 
 th, td {
     padding: .25em;
+    width: auto;
 }

@@ -34,5 +34,50 @@ filled_form = (s.replace("{{ NAME }}", name)
                .replace("{{ DATE }}", date)
               )
 
+invoices = 0
+
+try:
+    invoices = int(input("How many invoices would you like to enter? "))
+except:
+    invoices = 0
+    
+rows = []
+
+for i in range(invoices):
+    row = '''<tr>
+    <td>{{ DATE }}</td>
+    <td>{{ TASK }}</td>
+    <td>{{ HOURS }}</td>
+    <td>{{ PAY }}</td>
+    </tr>
+    '''
+    idate = input("Date: ")
+    itask = input("Task: ")
+    ihours = input("Hours: ")
+    ipay = input("Pay: ")
+    rows.append(row.replace("{{ DATE }}", idate)
+           .replace("{{ TASK }}", itask)
+           .replace("{{ HOURS }}", ihours)
+           .replace("{{ PAY }}", ipay)
+          )
+    
+row = '''<tr>
+<th>Total</th>
+<th></th>
+<th>{{ THOURS }}</th>
+<th>{{ TPAY }}</th>
+</tr>
+'''
+thours = input("Total hours: ")
+tpay = input("Total pay: ")
+rows.append(row.replace("{{ THOURS }}", thours)
+            .replace("{{ TPAY }}", tpay)
+           )
+table = "\n".join(rows)
+
+sp = filled_form.split("</table>")
+
+final = sp[0] + "\n" + table + "\n            </table>\n" + sp[1]
+
 f = open('final.html', 'w')
-f.write(filled_form)
+f.write(final)
