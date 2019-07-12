@@ -79,5 +79,5 @@ sp = filled_form.split("</table>")
 
 final = sp[0] + "\n" + table + "\n            </table>\n" + sp[1]
 
-f = open('final.html', 'w')
+f = open('../final.html', 'w')
 f.write(final)
