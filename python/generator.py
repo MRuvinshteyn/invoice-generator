@@ -44,12 +44,13 @@ except:
 rows = []
 
 for i in range(invoices):
-    row = '''<tr>
-    <td>{{ DATE }}</td>
-    <td>{{ TASK }}</td>
-    <td>{{ HOURS }}</td>
-    <td>{{ PAY }}</td>
-    </tr>
+    row = '''
+                <tr>
+                    <td>{{ DATE }}</td>
+                    <td>{{ TASK }}</td>
+                    <td>{{ HOURS }}</td>
+                    <td>{{ PAY }}</td>
+                </tr>
     '''
     idate = input("Date: ")
     itask = input("Task: ")
@@ -61,12 +62,13 @@ for i in range(invoices):
            .replace("{{ PAY }}", ipay)
           )
     
-row = '''<tr>
-<th>Total</th>
-<th></th>
-<th>{{ THOURS }}</th>
-<th>{{ TPAY }}</th>
-</tr>
+row = '''
+                <tr>
+                    <th>Total</th>
+                    <th></th>
+                    <th>{{ THOURS }}</th>
+                    <th>{{ TPAY }}</th>
+                </tr>
 '''
 thours = input("Total hours: ")
 tpay = input("Total pay: ")
